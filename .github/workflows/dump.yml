@@ -1,0 +1,36 @@
+name: ROM Dumper
+
+on:
+  workflow_dispatch:
+    inputs:
+      device:
+        description: 'Device codename (e.g. ruby, plato)'
+        required: true
+        type: string
+      rom_url:
+        description: 'ROM download URL'
+        required: true
+        type: string
+      upload_files:
+        description: 'Files to upload, support brace expansion (e.g. out/system_ext/lib64/{file1.so,file2.so})'
+        required: true
+        type: string
+
+jobs:
+  dump:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run dumper
+        env:
+          PIXELDRAIN_KEY: ${{ secrets.PIXELDRAIN_KEY }}
+        run: |
+          chmod +x dump.sh
+          bash dump.sh \
+            "${{ inputs.device }}" \
+            "${{ inputs.rom_url }}" \
+            "$PIXELDRAIN_KEY" \
+            "${{ inputs.upload_files }}"
