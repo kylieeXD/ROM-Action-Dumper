@@ -66,3 +66,7 @@ out/product/priv-app/MiuiCamera/MiuiCamera.apk out/system_ext/lib64/libcamera_al
 | Device codename | `plato` |
 | ROM download URL | `https://cdnorg.d.miui.com/OS2.0.5.0.VLQMIXM/plato_global-ota_full-OS2.0.5.0.VLQMIXM-user-15.0-0f809b9ff6.zip` |
 | Files to upload | `out/system_ext/lib64/{libcamera_algoup_jni.xiaomi.so,libcamera_mianode_jni.xiaomi.so,libcamera_ispinterface_jni.xiaomi.so,libmtkisp_metadata_sys.so,vendor.mediatek.hardware.camera.isphal@1.0.so,vendor.mediatek.hardware.camera.isphal-V1-ndk.so}` |
+
+## Credits
+
+- [DumprX](https://github.com/DumprX/DumprX) — used for extracting files from ROM images
