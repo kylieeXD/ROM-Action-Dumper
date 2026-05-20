@@ -12,7 +12,7 @@ on:
         required: true
         type: string
       upload_files:
-        description: 'Files to upload, support brace expansion (e.g. out/system_ext/lib64/{file1.so,file2.so})'
+        description: 'Files to upload, support brace expansion'
         required: true
         type: string
 
