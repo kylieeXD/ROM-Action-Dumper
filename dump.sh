@@ -17,7 +17,7 @@ git clone https://github.com/DumprX/DumprX "$WORK_DIR"
 echo ">> Downloading ROM..."
 curl -L "$ROM_URL" -o "$WORK_DIR/$DEVICE.zip"
 
-# ── Excute Dump
+# ── Execute Dump
 echo ">> Dumping ROM..."
 cd "$WORK_DIR"
 ./dumper.sh "$DEVICE.zip"
